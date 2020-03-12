@@ -20,8 +20,7 @@ if __name__ == '__main__':
         watchtowers = [frame for frame in frames_list if "watchtower" in frame]
         apriltags = [frame for frame in frames_list if "apriltag" in frame]
 
-        markers = utils.get_markers(
-            duckiebots, watchtowers, apriltags, listener)
+        markers = utils.get_markers(duckiebots, watchtowers, apriltags, listener)
         pub.publish(markers)
 
         rate.sleep()
